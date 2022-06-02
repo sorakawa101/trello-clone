@@ -11,6 +11,7 @@ export const TaskAddInput = ({inputText, setInputText, taskList, setTaskList}) =
             ...taskList,
             {
                 id: taskList.length,
+                draggableId: `task-${taskList.length}`,
                 text: inputText,
             },
         ]);
