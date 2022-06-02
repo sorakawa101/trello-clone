@@ -1,14 +1,14 @@
 import React from 'react'
 import { Draggable } from "react-beautiful-dnd"
 
-export const Task = ({ task, taskList, setTaskList }) => {
+export const Task = ({ task, taskList, setTaskList, index }) => {
     const handleDelete = (id) => {
         setTaskList(taskList.filter((task) => task.id !== id))
         // filter関数はtrueであれば残す
     };
 
     return (
-        <Draggable index={task.id} draggableId={task.draggableId}>
+        <Draggable index={index} draggableId={task.draggableId}>
             {(provided) => (
                 <div className="taskBox" key={task.id} ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps}>
                 <p className="taskText">{task.text}</p>
