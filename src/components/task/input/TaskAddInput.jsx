@@ -3,12 +3,15 @@ import React from 'react'
 export const TaskAddInput = ({inputText, setInputText, taskList, setTaskList}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e);
+        if(inputText === "") {
+            return;
+        }
         // カードを追加する
         setTaskList([
             ...taskList,
             {
-                text:inputText,
+                id: taskList.length,
+                text: inputText,
             },
         ]);
         setInputText("");
