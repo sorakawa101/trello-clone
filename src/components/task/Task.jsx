@@ -1,7 +1,9 @@
 import React from 'react'
 import { Draggable } from "react-beautiful-dnd"
 
-export const Task = ({ task, taskList, setTaskList, index }) => {
+export const Task = (props) => {
+    const { task, taskList, setTaskList, index } = props;
+
     const handleDelete = (id) => {
         setTaskList(taskList.filter((task) => task.id !== id))
         // filter関数はtrueであれば残す

@@ -5,7 +5,9 @@
     import { Tasks } from "./Tasks";
     import { Draggable } from "react-beautiful-dnd";
 
-export const TaskCard = ({ taskCardsList, setTaskCardsList, taskCard, index }) => {
+export const TaskCard = (props) => {
+    const { taskCardsList, setTaskCardsList, taskCard, index } = props;
+
     const [inputText, setInputText] = useState("");
     const [taskList, setTaskList] = useState([]);
 

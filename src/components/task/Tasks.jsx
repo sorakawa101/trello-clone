@@ -2,7 +2,9 @@ import React from 'react'
 import { DragDropContext, Droppable } from "react-beautiful-dnd"
 import { Task } from "./Task"
 
-export const Tasks = ({taskList, setTaskList}) => {
+export const Tasks = (props) => {
+    const {taskList, setTaskList} = props;
+
     const reorder = (taskList, startIndex, endIndex) => {
         // タスクを並び替える
         const remove = taskList.splice(startIndex, 1); // [2, 3]

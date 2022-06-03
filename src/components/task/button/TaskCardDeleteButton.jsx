@@ -1,6 +1,8 @@
 import React from 'react'
 
-export const TaskCardDeleteButton = ({ taskCardsList, setTaskCardsList, taskCard }) => {
+export const TaskCardDeleteButton = (props) => {
+    const { taskCardsList, setTaskCardsList, taskCard } = props;
+
     const taskCardDeleteButton = (id) => {
         // タスクカードを削除する
         setTaskCardsList(taskCardsList.filter((e) => e.id !== id))
