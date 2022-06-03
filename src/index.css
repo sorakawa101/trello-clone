@@ -4,18 +4,17 @@
     padding: 0;
 }
 
-h1 {
+h2 {
     font-size: 45px;
-    color: aliceblue;
+    color: rgb(228, 228, 228);
     font-weight: bold;
-    text-shadow: 2px 2px 2px black;
 }
 
 header {
     text-align: center;
     padding: 4px 10%;
     margin-bottom: 50px;
-    background-color: rgb(102, 94, 74, .5);
+    background-color: rgb(75, 75, 75, .5);
 }
 
 .app {
@@ -92,15 +91,15 @@ header {
     padding: 10px 18px;
     border-radius: 9999px; /* font-sizeと合わせて、ボタンを新円にするテクニック */
     font-size: 30px;
-    background-color: rgb(221, 194, 162);
-    box-shadow: 3px 3px 8px 1px black;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 1px 1px 3px 1px black;
     cursor: pointer;
     transition: all 0.3s; /* 沈み込む速度(transform)をゆっくりに */
 }
 
 .addTaskCardButton:hover {
     box-shadow: none;
-    transform: translate(3px, 3px);
+    transform: translate(1px, 1px);
 }
 
 .taskCardTitleAndTaskCardDeleteButtonArea {
