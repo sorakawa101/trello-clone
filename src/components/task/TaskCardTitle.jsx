@@ -10,7 +10,6 @@ export const TaskCardTitle = () => {
 
     const handleChange = (e) => {
         setInputCardTitle(e.target.value);
-        console.log(inputCardTitle);
     };
 
     const handleSubmit = (e) => {
