@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TaskCard } from "./TaskCard"
 import { AddTaskCardButton } from "./button/AddTaskCardButton"
 
 export const TaskCards = () => {
+    const [taskCardsList, setTaskCardsList] = useState([]);
     return (
-        <div>
-            <TaskCard />
-            <AddTaskCardButton />
+        <div className="taskCardsArea">
+            {taskCardsList.map((taskCardList) => (
+                <TaskCard key={taskCardList.id}/>
+            ))}
+            <AddTaskCardButton
+                taskCardsList={taskCardsList}
+                setTaskCardsList={setTaskCardsList}
+            />
         </div>
     )
 }
