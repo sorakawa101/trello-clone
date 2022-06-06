@@ -18,7 +18,7 @@ header {
 }
 
 .app {
-    background: url(../src/images/mountain.jpg);
+    background: url(https://source.unsplash.com/random/2560x1500);
     background-repeat: no-repeat;
     height: 100vh;
 }
